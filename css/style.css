@@ -189,6 +189,11 @@ lable>div{
 
 .slider{
     position: relative;
+    padding: 0 100px 0 100px;
+}
+
+.slider-item{
+    margin: 0 auto;
 }
 
 /* Слайдер */
@@ -233,13 +238,16 @@ lable>div{
 .trainers .slider{
     position: relative;
 }
+
+/* Slider */
+
 .trainers .slider .slick-arrow.slick-prev{
     position: absolute;
     left: 0;
     z-index: 2;
-    top: 35%;
     background: url(../img/icons/left_arrow.svg) 0 0 no-repeat;
     background-size: cover;
+    /*margin-right: 100px;*/
 }
 
 .trainers .slider .slick-arrow{
@@ -247,16 +255,41 @@ lable>div{
     width: 60px;
     font-size: 0;
     border: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
 }
 .trainers .slider .slick-arrow.slick-next{
     position: absolute;
     right: 0;
     z-index: 2;
-    bottom: 50%;
     background: url(../img/icons/right_arrow.svg) 0 0 no-repeat;
     background-size: cover;
 }
 
+.trainers .slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainers .slick-dots li{
+    list-style: none;
+}
+.trainers .slick-dots button{
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: #BD8C44;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.trainers .slick-active{
+    background: none;
+    border: 3px;
+}
+    /*--------------==Shedule==---------------*/
 .shedule{
     display: flex;
     flex-direction: column;
