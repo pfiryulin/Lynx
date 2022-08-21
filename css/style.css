@@ -96,7 +96,8 @@ lable>div{
     height: auto;
     display: flex;
     flex-wrap: wrap;
-
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .card{
@@ -109,6 +110,11 @@ lable>div{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background: #D9D9D9;
+    color: #3F3C3C;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 /*.backgroundImg{*/
@@ -118,17 +124,13 @@ lable>div{
 /*    z-index: 0;*/
 /*}*/
 
-.catalog{
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .card-content{
     width: 80%;
     margin: 30% auto 0 auto;
-    bottom: 50%;
+    /*bottom: 50%;*/
     text-align: center;
     color: #D9D9D9;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
 }
 
 .button {
@@ -276,49 +278,132 @@ lable>div{
 .trainers .slick-dots li{
     list-style: none;
 }
-.trainers .slick-dots button{
+.trainers .slick-dots li button{
     font-size: 0;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background: #BD8C44;
+    border: 10px;
+    border-color: #fff;
     border-radius: 15px;
     margin: 5px;
+
 }
 
-.trainers .slick-active{
-    background: none;
-    border: 3px;
-}
+
+    /*---------------==feedback==--------------*/
+    /*.feedback{*/
+    /*    display: flex;*/
+    /*    justify-content: space-evenly;*/
+    /*    align-items: center;*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
+    /*.feedback .card{*/
+    /*    background: #D9D9D9;*/
+    /*    color: #3F3C3C;*/
+    /*    padding-left: 5%;*/
+    /*    padding-right: 5%;*/
+    /*    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);*/
+    /*}*/
     /*--------------==Shedule==---------------*/
 .shedule{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background:rgb(188, 188, 188);
 }
 
-.shedule>table{
+.shedule-info, .shedule-head{
+    display: flex;
+    width: 100%;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.shedule-head{
+    background: #BD8C44;
+    height: 50px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.shedule-card{
+    width: 16%;
+}
+
+.shedule h4{
+    color: #BD8C44;
+    margin-top: 2rem;
+}
+
+
+/*-----------==Coast==---------------*/
+
+.cost .card-content{
+    color:#3F3C3C;
+    margin: 5% 0 10% 0;
+    height: 70%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.span-cost{
+    color: #BD8C44;
+    font-weight: bold;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+}
+
+.cost h4{
     margin-bottom: 30px;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    text-align: center;
 }
 
-.right{
-    text-align: right;
-    padding-right: 20px;
+.cost .card div{
+    text-align: center;
 }
 
-.left{
-    text-align: left;
-    padding-left: 20px;
+/*--------------==contacts==-----------------*/
+.contacts{
+    color: #D9D9D9;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
 }
-
-.feedback>p{
-   margin-top: 20px;
-}
-
-.cost{
+.map{
     display: flex;
     flex-direction: column;
 }
+
+
+.contacts>div{
+    width: 50%;
+}
+.map>span{
+    margin: 20px;
+}
+
+.socialNetwork{
+    /*display: flex;*/
+    text-align: center;
+}
+
+.phoneNumber{
+    margin-bottom: 50px;
+}
+
+.socialNetwork-link>a{
+    margin: 0 10px;
+    /*display: flex;*/
+    /*justify-content: space-evenly;*/
+}
+
+
 
 
 
