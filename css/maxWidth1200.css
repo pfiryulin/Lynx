@@ -8,7 +8,7 @@ body{
     background: rgb(40, 40, 40);
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(100vw/59.375);
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
 }
 
 a{
@@ -19,7 +19,7 @@ a{
 header{
     width: 100%;
     height: calc(100vw/2.85);
-    background: url(../img/bacground/headerBackground.png) 100%;
+    background: url(../img/background/headerBackground.png) 100%;
     background-size: cover;
 }
 header>img{
@@ -62,20 +62,23 @@ nav img{
     color: rgb(188, 188, 188);
     justify-content: center;
     align-items: center;
+
 }
 
 .section__icon{
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     /*min-width: 800px;*/
     justify-content: space-evenly;
+    /*flex-wrap: wrap;*/
 }
 
 .lable{
     width: 40%;
-    min-width: 400px;
+    min-width: 200px;
     display: flex;
+    flex-direction: column;
     margin-top: 70px;
     align-items: center;
     /*text-align: left;*/
@@ -86,15 +89,74 @@ lable>div{
 }
 
 .section__info{
-    background: rgb(188, 188, 188);
+    /*background: rgb(188, 188, 188);*/
     color: rgb(40, 40, 40);
     padding: 70px 10% 70px 10%;
 }
+
+.catalog{
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 25vw ;
+    height: calc(25vw*1.25);
+    margin: 25px;
+    min-width: 200px;
+    min-height: calc(200px*1.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #D9D9D9;
+    color: #3F3C3C;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    /*padding-left: 5%;*/
+    /*padding-right: 5%;*/
+}
+
+/*.backgroundImg{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: relative;*/
+/*    z-index: 0;*/
+/*}*/
+
+.card-content{
+    width: 80%;
+    margin: 30% auto 0 auto;
+    /*bottom: 50%;*/
+    text-align: center;
+    color: #D9D9D9;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 12) + 12px);
+}
+
+.button {
+    display: block;
+    width: 10vw;
+    min-width: 90px;
+    height: calc(10vw / 3);
+    min-height: 30px;
+    border-radius: 30px;
+    background: #BD8C44;
+    color: #3F3C3C;
+    text-align: center;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    padding-top:3%;
+}
+
+
 
 .aboutUs{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgb(188, 188, 188);
 }
 
 .aboutUs:first-child{
@@ -106,82 +168,237 @@ lable>div{
     margin: 30px 0px;
 }
 
-.service{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.list{
-    width: 40%;
-    min-width: 400px;
-}
-
-.button{
-    display: block;
-    width: 500px;
-    height: 100px;
-    background: rgb(189, 140,68);
-    color: rgb(40, 40, 40);
-    border-radius: 50px;
-    text-align: center;
-    padding-top: 32px;
-    margin-top: 15px;
-    align-self: center;
-}
-
-.insert{
-    width: 100%;
-}
-.insert>img{
-    width: 100%;
-}
-
 .trainers{
     display: flex;
     flex-direction: column;
     align-content: center;
-}
-
-.trainer-icon{
+    color: rgb(188, 188, 188);
     text-align: center;
 }
-.trainer-icon>img{
-    cursor: pointer;
+
+.trainers h3{
+    margin-bottom: 30px;
 }
 
+.trainers__card{
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    text-align: left;
+    gap: 5%;
+    width: 700%;
+}
+
+.trainers__card-text p{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.slider{
+    position: relative;
+    padding: 0 100px 0 100px;
+}
+
+.slider-item{
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+.trainers .slider{
+    position: relative;
+}
+
+/* Slider */
+
+.trainers .slider .slick-arrow.slick-prev{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    background: url(../img/icons/left_arrow.svg) 0 0 no-repeat;
+    background-size: cover;
+    /*margin-right: 100px;*/
+}
+
+.trainers .slider .slick-arrow{
+    height: 60px;
+    width: 60px;
+    font-size: 0;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+}
+.trainers .slider .slick-arrow.slick-next{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    background: url(../img/icons/right_arrow.svg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.trainers .slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainers .slick-dots li{
+    list-style: none;
+}
+
+/*---------------==Feedback==----------------*/
+
+.feedback .card-content{
+    color:rgb(40, 40, 40);
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    text-align: left;
+    margin: 10% auto;
+    height: 100%;
+}
+
+.feedback p{
+    padding-top: 10%;
+}
+
+
+/*--------------==Shedule==---------------*/
 .shedule{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background:rgb(188, 188, 188);
 }
 
-.shedule>table{
-    /*width: 50%;*/
+.shedule-info, .shedule-head{
+    display: flex;
+    width: 100%;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+
+.shedule-head{
+    background: #BD8C44;
+    height: 50px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.shedule-card{
+    width: 16%;
+}
+
+.shedule h4{
+    color: #BD8C44;
+    margin-top: 2rem;
+}
+
+
+/*-----------==Coast==---------------*/
+
+.cost .card-content{
+    color:#3F3C3C;
+    margin: 5% 0 10% 0;
+    height: 70%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.span-cost{
+    color: #BD8C44;
+    font-weight: bold;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+}
+
+.cost h4{
     margin-bottom: 30px;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    text-align: center;
 }
 
-.right{
-    text-align: right;
-    padding-right: 20px;
+.cost .card div{
+    text-align: center;
 }
 
-.left{
-    text-align: left;
-    padding-left: 20px;
+/*--------------==contacts==-----------------*/
+.contacts{
+    color: #D9D9D9;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
 }
-
-.feedback>p{
-    margin-top: 20px;
-}
-
-.cost{
+.map{
     display: flex;
     flex-direction: column;
-
 }
+
+
+.contacts>div{
+    width: 50%;
+}
+.map>span{
+    margin: 20px;
+}
+
+.socialNetwork{
+    /*display: flex;*/
+    text-align: center;
+}
+
+.phoneNumber{
+    margin-bottom: 50px;
+}
+
+.socialNetwork-link>a{
+    margin: 0 10px;
+    /*display: flex;*/
+    /*justify-content: space-evenly;*/
+}
+
+
 
 
 
