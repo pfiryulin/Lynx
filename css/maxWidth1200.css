@@ -182,11 +182,12 @@ lable>div{
 
 .trainers__card{
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     align-items: center;
     text-align: left;
     gap: 5%;
-    width: 700%;
+    width: 70%;
+    text-align: center;
 }
 
 .trainers__card-text p{
@@ -201,7 +202,10 @@ lable>div{
 
 .slider-item{
     margin: 0 auto;
-    width: 100%;
+    display: flex;
+    /*align-items: center;*/
+    /*width: 100%;*/
+    justify-content: center;
 }
 
 /* Слайдер */
@@ -287,6 +291,15 @@ lable>div{
 
 /*---------------==Feedback==----------------*/
 
+.feedback .catalog{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback .card{
+    width: 100%;
+}
 .feedback .card-content{
     color:rgb(40, 40, 40);
     font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
@@ -300,39 +313,6 @@ lable>div{
 }
 
 
-/*--------------==Shedule==---------------*/
-.shedule{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:rgb(188, 188, 188);
-}
-
-.shedule-info, .shedule-head{
-    display: flex;
-    width: 100%;
-    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-}
-
-.shedule-head{
-    background: #BD8C44;
-    height: 50px;
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-.shedule-card{
-    width: 16%;
-}
-
-.shedule h4{
-    color: #BD8C44;
-    margin-top: 2rem;
-}
 
 
 /*-----------==Coast==---------------*/
