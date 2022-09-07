@@ -1,0 +1,50 @@
+.shedule-card{
+    width: 100%;
+    flex-direction: column;
+}
+
+.shedule-head, .shedule-info{
+    width: 100%;
+    text-align: center;
+    /*display: block;*/
+    justify-content: center;
+}
+
+.shedule-info{
+    margin: 0;
+}
+
+/*--------------==contacts==-----------------*/
+.contacts{
+    color: #D9D9D9;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.map{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.map>script{
+    width: 80%;
+}
+
+.contacts>div{
+    width: 50%;
+}
+
+.socialNetwork{
+    text-align: center;
+}
+
+.phoneNumber{
+    margin-bottom: 50px;
+}
+
+.socialNetwork-link>a{
+    margin: 0 10px;
+}

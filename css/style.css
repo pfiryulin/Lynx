@@ -303,15 +303,30 @@ lable>div{
     justify-content: center;
     align-items: center;
     background:rgb(188, 188, 188);
+    /*width: 90%;*/
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.shedule__table{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    /*flex-direction: column;*/
 }
 
 .shedule-info, .shedule-head{
     display: flex;
-    width: 100%;
+/*    width: 100%;*/
     font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
     justify-content: space-evenly;
     text-align: center;
     align-items: center;
+}
+
+.shedule-info{
+    width: 80%;
+    /*margin-top: 10px;*/
 }
 
 .shedule-head{
@@ -319,10 +334,15 @@ lable>div{
     height: 50px;
     margin: 20px 0;
     font-weight: bold;
+    width: 100%;
 }
 
 .shedule-card{
     width: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .shedule h4{
@@ -365,6 +385,7 @@ lable>div{
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 100px;
+    flex-wrap: wrap;
 }
 .map{
     display: flex;
@@ -374,9 +395,10 @@ lable>div{
 
 .contacts>div{
     width: 50%;
+    min-width: 250px;
 }
 .map>span{
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
 .socialNetwork{
