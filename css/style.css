@@ -28,29 +28,41 @@ header>img{
     width: calc(100vw/4.13);
 }
 nav{
-    display: flex;
+    /*display: flex;*/
+    width: 100%;
+    /*margin: 0 auto;*/
+    /*margin-top: 50px;*/
+}
 
+.kitchen{
+    display: none;
+}
+
+menu{
+    display: flex;
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
-
 }
 
-nav>ul{
+menu>ul{
     display: flex;
     width: 100%;
     justify-content: space-between;
-
-
 }
-nav li{
+menu li{
     display: inline-block;
     width: 14%;
     text-align: center;
 }
 
-nav img{
+menu img{
     width: calc(100vw/15.447);
+}
+
+
+.burger:after{
+    border: 1px solid black;
 }
 
 .section__lable{
@@ -245,7 +257,7 @@ lable>div{
 
 /* Slider */
 
-.trainers .slider .slick-arrow.slick-prev{
+.trainers .slick-prev{
     position: absolute;
     left: 0;
     z-index: 2;
@@ -263,7 +275,7 @@ lable>div{
     top: 50%;
     margin-top: -30px;
 }
-.trainers .slider .slick-arrow.slick-next{
+.trainers .slick-next{
     position: absolute;
     right: 0;
     z-index: 2;
@@ -388,6 +400,7 @@ lable>div{
     flex-wrap: wrap;
 }
 .map{
+    width: 50%;
     display: flex;
     flex-direction: column;
 }

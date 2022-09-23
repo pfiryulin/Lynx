@@ -1,57 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
-    background: rgb(40, 40, 40);
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    /*overflow: hidden;*/
 }
 
-a{
-    text-decoration: none;
-    color: rgb(189, 140,68);
-}
-
-header{
-    width: 100%;
-    height: calc(100vw/2.85);
-    background: url(../img/background/headerBackground.png) 100%;
-    background-size: cover;
-}
-header>img{
-    margin-top: 45px;
-    margin-left: 5%;
-    width: calc(100vw/4.13);
-}
-nav{
-    display: flex;
-
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
-
-}
-
-nav>ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
 
 
-}
-nav li{
-    display: inline-block;
-    width: 14%;
-    text-align: center;
-}
 
-nav img{
-    width: calc(100vw/15.447);
-}
+/*.burger{*/
+/*    width: 100%;*/
+/*    height: 2px;*/
+/*    background: #fff;*/
+/*    margin-top: 5px;*/
+/*}*/
+
 
 .section__lable{
     display: flex;
@@ -186,7 +146,7 @@ lable>div{
     align-items: center;
     text-align: left;
     gap: 5%;
-    width: 70%;
+    width: 100%;
     text-align: center;
 }
 
@@ -294,7 +254,7 @@ lable>div{
 .feedback .catalog{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
 }
 
 .feedback .card{
@@ -324,7 +284,10 @@ lable>div{
 
 .shedule-head{
     width: 40%;
+    margin: 0;
     font-size: 1rem;
+    justify-content: left;
+    padding-left: 5%;
 }
 
 .shedule-info {
