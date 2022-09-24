@@ -11,9 +11,9 @@ $(document).ready(function(){
         }, ]
     });
 
-    $('.kitchen').click(function (event)
+    $('.burger').click(function (event)
     {
-        $('.kitchen,menu').toggleClass('active');
+        $('.burger,menu').toggleClass('active');
     });
 })
 

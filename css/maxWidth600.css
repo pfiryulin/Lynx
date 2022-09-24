@@ -1,6 +1,60 @@
-.container-fluid{
-    /*margin-top: 50px;*/
+.header__burger{
+    width: 100%;
+    height: 50px;
+    background: rgb(40, 40, 40);
+    display: flex;
+    justify-content: left;
 }
+
+.burger{
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 30px;
+    height: 20px;
+    display: block;
+    z-index: 2;
+}
+
+.burger:before,
+.burger:after,
+.burger span{
+    content: '';
+    background-color: rgb(189, 140,68);
+    position: absolute;
+    width: 100%;
+    height: 3px;
+}
+
+.burger:before{
+    top: 0;
+
+}
+
+.burger:after{
+    bottom: 0;
+}
+
+.burger span{
+    top: 8.5px;
+}
+
+.burger.active:before{
+    transform: rotate(45deg);
+    top:8.5px
+}
+
+.burger.active:after{
+    transform: rotate(-45deg);
+    bottom:8.5px
+}
+
+.burger.active span{
+    transform: scale(0);
+}
+
+
+
 menu{
     width: 100%;
     height: 100vh;
@@ -38,60 +92,7 @@ nav{
     /*overflow: hidden;*/
 }
 
-.nav__burger{
-    width: 100%;
-    height: 50px;
-    background: rgb(40, 40, 40);
-    position: absolute;
-    top:0;
-}
 
-.kitchen{
-    position: absolute;
-    top: 15px;
-    right: 5px;
-    width: 30px;
-    height: 20px;
-    display: block;
-    z-index: 2;
-}
-
-.kitchen:before,
-.kitchen:after,
-.kitchen span{
-    content: '';
-    background-color: rgb(189, 140,68);
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    }
-
-.kitchen:before{
-    top: 0;
-
-}
-
-.kitchen:after{
-    bottom: 0;
-}
-
-.kitchen span{
-    top: 8.5px;
-}
-
-.kitchen.active:before{
-    transform: rotate(45deg);
-    top:8.5px
-}
-
-.kitchen.active:after{
-    transform: rotate(-45deg);
-    bottom:8.5px
-}
-
-.kitchen.active span{
-    transform: scale(0);
-}
 
 menu.active{
     top:0;

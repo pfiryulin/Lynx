@@ -22,7 +22,7 @@ header{
     background: url(../img/background/headerBackground.png) 100%;
     background-size: cover;
 }
-header>img{
+header img{
     margin-top: 45px;
     margin-left: 5%;
     width: calc(100vw/4.13);
@@ -34,7 +34,7 @@ nav{
     /*margin-top: 50px;*/
 }
 
-.kitchen{
+.header__burger{
     display: none;
 }
 
@@ -58,11 +58,6 @@ menu li{
 
 menu img{
     width: calc(100vw/15.447);
-}
-
-
-.burger:after{
-    border: 1px solid black;
 }
 
 .section__lable{
