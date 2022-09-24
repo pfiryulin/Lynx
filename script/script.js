@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.slider').slick({
-        // dots:true,
+        dots:true,
         // arrows: false;
         responsive: [{
             breakpoint: 500,
@@ -11,9 +11,9 @@ $(document).ready(function(){
         }, ]
     });
 
-    $('.burger').click(function (event)
+    $('.burger,.menu-link').click(function (event)
     {
-        $('.burger,menu').toggleClass('active');
+        $('.burger,menu,body').toggleClass('active');
     });
 })
 

@@ -16,13 +16,13 @@
 <body>
 
 
-
-    <header class="">
-        <div class="header__burger">
-            <div class="burger">
-                <span></span>
-            </div>
+    <div class="header__burger">
+        <div class="burger">
+            <span></span>
         </div>
+    </div>
+    <header class="">
+
         <div class="container-fluid">
             <img src="img/icons/logo.png" width="490px" alt="">
         </div>
@@ -32,39 +32,39 @@
 
         <menu>
             <ul>
-                <li>
-                    <a href="#">
+                <li class="menu-link">
+                    <a href="#aboutUs">
                         <img src="img/icons/aboutUs.png" alt=""><br>
                         <span>О нас</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="menu-link">
+                    <a href="#ourTiam">
                         <img src="img/icons/team.png" alt=""><br>
                         <span>Наша команда</span><br>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="menu-link">
+                    <a href="#shedule">
                         <img src="img/icons/schedule.png" alt=""><br>
-                        <span>Наша команда</span>
+                        <span>Расписание</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="menu-link">
+                    <a href="#feedback">
                         <img src="img/icons/feedback.png" alt=""><br>
                         <span>Отзывы</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link">
+                <li class="menu-link">
+                    <a href="#cost" class="nav-link">
                         <img src="img/icons/cost.png" alt=""><br>
                         <span>Стоимость</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="menu-link">
+                    <a href="#contacts">
                         <img src="img/icons/contacts.png" alt=""><br>
                         <span>Контакты</span>
                     </a>
@@ -102,7 +102,7 @@
         </div>
     </section>
 
-    <section class="section__info aboutUs">
+    <section class="section__info aboutUs" id="aboutUs">
             <h1>КСЛ Рысь</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias amet? Ab, autem commodi esse excepturi sed sunt voluptatum? A ab autem exercitationem id illo officia quis repellat rerum voluptatem.
@@ -148,7 +148,7 @@
         </div>
     </section>
 
-    <section class="section__info trainers">
+    <section class="section__info trainers" id="ourTiam">
             <h3>Наша команда</h3>
             <div class="slider">
                 <div class="slider-item">
@@ -194,7 +194,7 @@
 
     </section>
 
-    <section class="section__info feedback">
+    <section class="section__info feedback" id="feedback">
         <div class="catalog">
             <div class="card">
                 <div class="card-content">
@@ -226,7 +226,7 @@
     </section>
 
 
-    <section class="section__info shedule">
+    <section class="section__info shedule" id="shedule">
         <h3>Расписание</h3>
             <div class="shedule__table">
 
@@ -293,7 +293,7 @@
 
     </section>
 
-    <section class="section__info cost">
+    <section class="section__info cost" id="cost">
         <div class="catalog">
             <div class="card">
 
@@ -357,7 +357,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="socialNetwork">
             <div class="phoneNumber">
                 +7(902)-767-37-27
