@@ -122,16 +122,7 @@ lable>div{
     background: #D9D9D9;
     color: #3F3C3C;
     font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 10) + 10px);
-    /*padding-left: 5%;*/
-    /*padding-right: 5%;*/
-}
-
-/*.backgroundImg{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    position: relative;*/
-/*    z-index: 0;*/
-/*}*/
+ }
 
 .card-content{
     width: 80%;
@@ -156,8 +147,6 @@ lable>div{
     padding-top:3%;
 }
 
-
-
 .aboutUs{
     display: flex;
     flex-direction: column;
@@ -168,7 +157,6 @@ lable>div{
 .aboutUs:first-child{
     align-self: start;
 }
-
 
 .aboutUs>p{
     margin: 30px 0px;
@@ -258,7 +246,6 @@ lable>div{
     z-index: 2;
     background: url(../img/icons/left_arrow.svg) 0 0 no-repeat;
     background-size: cover;
-    /*margin-right: 100px;*/
 }
 
 .trainers .slider .slick-arrow{
@@ -284,9 +271,38 @@ lable>div{
     align-items: center;
 }
 
-.trainers .slick-dots li{
+.slick-dots li{
     list-style: none;
+    margin-right: 10px;
 }
+
+.slick-dots li:last-child{
+    margin-right: 0;
+}
+
+.slick-dots li>button {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: rgb(189, 140, 68);
+    border-color: rgb(189, 140, 68);
+    font-size: 1px;
+    color: rgb(189, 140, 68);
+    display: inline-block;
+    /*outline: none;*/
+    border: none;
+}
+
+
+
+
+li.slick-active>button{
+    background: rgb(40, 40, 40);
+    color: rgb(40, 40, 40);
+    border: 2px solid rgb(189, 140, 68);
+}
+
+
 
 /*---------------==Feedback==----------------*/
 
