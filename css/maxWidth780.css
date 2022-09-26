@@ -61,8 +61,6 @@ header{
     transform: scale(0);
 }
 
-
-
 menu{
     width: 100%;
     height: 100vh;
@@ -100,12 +98,9 @@ nav{
     /*overflow: hidden;*/
 }
 
-
-
 menu.active{
     top:0;
 }
-
 
 .shedule-card{
     width: 100%;
@@ -158,13 +153,24 @@ menu.active{
     margin: 0 10px;
 }
 
+
+/*----Trainers-----*/
+.trainers{
+    padding: 5px;
+}
 .trainers__card-text p {
     margin-top: 5px;
     margin-left: 0;
 }
 
+
+/*----Slider-------*/
 .slider-item{
     width: 100vw;
+}
+
+.slick-slider{
+    padding: 0;
 }
 
 /*.trainers .slider .slick-arrow,.slick-prev, .slick-next{*/
