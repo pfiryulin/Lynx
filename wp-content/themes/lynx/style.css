@@ -220,20 +220,25 @@ lable>div{
     /*background-size: cover;*/
     height: 30px;
     width: 30px;
-    border-bottom: 10px, solid, rgb(189, 140, 68);
-    /*background-color: rgb(40, 40, 40);*/
+    background-color: rgb(40, 40, 40);
+    transform: rotate(45deg);
 }
 
 .trainers .slider .slick-arrow{
     height: 60px;
     width: 60px;
     font-size: 0;
-    border: 0;
+    border-bottom: 10px solid rgb(189, 140, 68);
+    border-left: 10px solid rgb(189, 140, 68);
+    border-top: 0;
+    border-right: 0;
     position: absolute;
     top: 50%;
     margin-top: -30px;
+    cursor: pointer;
 }
 .trainers .slick-next{
+    transform: rotate(-135deg);
     position: absolute;
     right: 0;
     z-index: 2;
