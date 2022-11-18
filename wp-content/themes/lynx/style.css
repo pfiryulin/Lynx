@@ -216,8 +216,6 @@ lable>div{
     position: absolute;
     left: 0;
     z-index: 2;
-    /*background: url(../img/icons/left_arrow.svg) 0 0 no-repeat;*/
-    /*background-size: cover;*/
     height: 30px;
     width: 30px;
     background-color: rgb(40, 40, 40);
@@ -242,8 +240,6 @@ lable>div{
     position: absolute;
     right: 0;
     z-index: 2;
-    background: url(../img/icons/right_arrow.svg) 0 0 no-repeat;
-    background-size: cover;
 }
 
 .trainers .slick-dots{
