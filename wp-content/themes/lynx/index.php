@@ -28,52 +28,53 @@
         </div>
         <div class="lable">
             <img src="<?php echo get_template_directory_uri() . '/assets/'?>img/icons/priz.png" alt="">
-            <div>Мотивация и личные интересы</div>
+            <div>Мотивация и личные интересы
+            </div>
         </div>
     </div>
 </section>
 
 <section class="section__info aboutUs" id="aboutUs">
-    <h1>КСЛ Рысь</h1>
+    <h1><?php the_field('about_title'); ?></h1>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias amet? Ab, autem commodi esse excepturi sed sunt voluptatum? A ab autem exercitationem id illo officia quis repellat rerum voluptatem.
+        <?php the_field('about_company'); ?></h1>
     </p>
     <div class="catalog">
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/lernarcher.png); background-size: cover;">
             <div class="card-content">
                 Обучение стрельбе из традиционного и исторического лука
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/shotwithring.png); background-size: cover;">
             <div class="card-content">
                 Стрельба с кольцом и средиземноморский хват
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/lerncheldren.png); background-size: cover;">
             <div class="card-content">
                 Обучаем взрослых и детей с 6 лет
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/grouplesson.png); background-size: cover;">
             <div class="card-content">
                 Индивидуальные и групповые занятия
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/games.png); background-size: cover;">
             <div class="card-content">
                 Проводим соревнования по различным дисциплинам
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
         <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/corporation.png); background-size: cover;">
             <div class="card-content">
                 Корпоративные и праздничные мероприятия
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
     </div>
@@ -227,7 +228,7 @@
                 <span class="span-cost">500</span><br>
                 <span class="">рублей/занятие</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -238,7 +239,7 @@
                 <span class="span-cost">1200</span><br>
                 <span class="">рублей/занятие</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -250,7 +251,7 @@
                 <span class="">рублей/занятие</span><br>
                 <span>Каждый дом. стрелок +600р.</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -259,7 +260,7 @@
                 <span class="span-cost">4200</span><br>
                 <span class="">рублей</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -268,7 +269,7 @@
                 <span class="span-cost">6000</span><br>
                 <span class="">рублей/занятие</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -280,7 +281,7 @@
                 <span class="span-cost">8000</span>
                 <span>р. - 2,5 часа аренды </span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
         <div class="card">
@@ -289,7 +290,7 @@
                 <span class="span-cost">4000</span><br>
                 <span class="">рублей/час</span>
             </div>
-            <a href="tel:+79027673727" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
         </div>
 
     </div>
@@ -298,7 +299,7 @@
 <section class="contacts" id="contacts">
     <div class="socialNetwork">
         <div class="phoneNumber">
-            <a href="tel:+79027673727"> +7(902)-767-37-27 </a>
+            <a href="tel:<?php the_field('phone_numb'); ?>"> <?php the_field('phone_numb'); ?> </a>
         </div>
         <div class="socialNetwork-link">
             <h4>Связаться с нами</h4><br>
@@ -310,7 +311,7 @@
     </div>
     <div class="map">
         <div>
-            Иркутск, ул. Лыткина 75А, 2-й этаж
+            <?php the_field('address'); ?>
         </div> <br>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad7e95251aecb5e8130a3d8c5d0432429a400ef35d13de7f289b5d132239ea38f&amp;width=100%&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
 
