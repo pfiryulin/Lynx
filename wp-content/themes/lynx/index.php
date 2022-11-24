@@ -40,75 +40,80 @@
         <?php the_field('about_company'); ?></h1>
     </p>
     <div class="catalog">
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/lernarcher.png); background-size: cover;">
-            <div class="card-content">
-                Обучение стрельбе из традиционного и исторического лука
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/shotwithring.png); background-size: cover;">
-            <div class="card-content">
-                Стрельба с кольцом и средиземноморский хват
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/lerncheldren.png); background-size: cover;">
-            <div class="card-content">
-                Обучаем взрослых и детей с 6 лет
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/grouplesson.png); background-size: cover;">
-            <div class="card-content">
-                Индивидуальные и групповые занятия
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/games.png); background-size: cover;">
-            <div class="card-content">
-                Проводим соревнования по различным дисциплинам
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-        <div class="card pointer" style="background:url(<?php echo get_template_directory_uri() . '/assets/'?>img/background/corporation.png); background-size: cover;">
-            <div class="card-content">
-                Корпоративные и праздничные мероприятия
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
+        <?php
+        // параметры по умолчанию
+        $my_posts = get_posts( array(
+        'numberposts' => -1,
+        'category_name'    => 'catalog',
+        'orderby'     => 'date',
+        'order'       => 'ASC',
+        'post_type'   => 'post',
+        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ) );
 
+        global $post;
+
+        foreach( $my_posts as $post ){
+        setup_postdata( $post );
+        ?>
+<!--        // формат вывода the_title() ...-->
+            <div class="card pointer" style="background:url('<?php the_field('cat_img'); ?>'); background-size: cover;">
+                <div class="card-content">
+                    <?php the_title();?>
+                </div>
+                <a href="tel:<?php the_field('phone_numb',2); ?>" class="button card-button">Записаться</a>
+            </div>
+        <?php
+        }
+
+        wp_reset_postdata(); // сброс
+        ?>
     </div>
 </section>
 
 <section class="section__info trainers" id="ourTiam">
     <h3>Наша команда</h3>
     <div class="slider">
+
+            <?php
+            // параметры по умолчанию
+            $my_posts = get_posts( array(
+                'numberposts' => -1,
+                'category_name'    => 'treners',
+                'orderby'     => 'date',
+                'order'       => 'ASC',
+                'post_type'   => 'post',
+                'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
+
+            global $post;
+
+            foreach( $my_posts as $post ){
+                setup_postdata( $post );
+            ?>
         <div class="slider-item">
-            <div class="trainers__card">
-                <div class="trainers__card-img">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/'?>img/trainer-exemp.png" alt="Иванов Иван" width="150px">
+                <div class="trainers__card">
+                    <div class="trainers__card-img">
+                        <img src="<?php the_field('trainer_photo'); ?>" alt="Иванов Иван" width="150px">
+                    </div>
+                    <div class="trainers__card-text">
+                        <h4><?php the_title();?></h4>
+                        <p>
+                            <?php the_field('about_trainer'); ?>
+                        </p>
+                    </div>
                 </div>
-                <div class="trainers__card-text">
-                    <h4>Андрей Копылов</h4>
-                    <p>
-                        Старший тренер
-                    </p>
-                </div>
-            </div>
         </div>
-        <div class="slider-item">
-            <div class="trainers__card">
-                <div class="trainers__card-img">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/'?>img/trainers1.jpg" alt="Иванов Иван" width="150px">
-                </div>
-                <div class="trainers__card-text">
-                    <h4>Ирина Копылова</h4>
-                    <p>
-                        Президент Автономной некоммерческой организации Клуб стрельбы из лука «Рысь»
-                    </p>
-                </div>
-            </div>
-        </div>
+
+            <?php
+            }
+
+            wp_reset_postdata(); // сброс
+
+
+            ?>
+
+
 
     </div>
 
