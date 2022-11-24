@@ -115,34 +115,41 @@
 </section>
 
 <section class="section__info feedback" id="feedback">
+
     <div class="catalog">
-        <div class="card">
-            <div class="card-content">
-                <h4>Петр Самсонов</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam atque consectetur cum deleniti est incidunt laborum minus nemo nihil perspiciatis, quae quaerat quas quod rerum sint temporibus veritatis voluptatum.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h4>Петр Самсонов</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam atque consectetur cum deleniti est incidunt laborum minus nemo nihil perspiciatis, quae quaerat quas quod rerum sint temporibus veritatis voluptatum.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h4>Петр Самсонов</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam atque consectetur cum deleniti est incidunt laborum minus nemo nihil perspiciatis, quae quaerat quas quod rerum sint temporibus veritatis voluptatum.
-                </p>
-            </div>
-        </div>
+        <?php
+        // параметры по умолчанию
+        $my_posts = get_posts( array(
+            'numberposts' => 5,
+            'category_name'    => 'feedback',
+            'orderby'     => 'rand',
+//            'order'       => 'DESC',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ) );
 
-    </div>
+        global $post;
 
+        foreach( $my_posts as $post ){
+            setup_postdata( $post );
+
+            ?>
+                <div class="card">
+                    <div class="card-content">
+                        <h4><?php the_title();?></h4>
+                        <p>
+                            <?php the_field('feedback');?>
+                        </p>
+                    </div>
+                </div>
+
+
+<!--            // формат вывода the_title() ...-->
+            <?php
+        }
+
+        wp_reset_postdata(); // сброс
+        ?>
 </section>
 
 
