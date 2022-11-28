@@ -161,71 +161,39 @@
 <section class="section__info shedule" id="shedule">
     <h3>Расписание</h3>
     <div class="shedule__table">
+        <?php
 
-        <div class="shedule-card">
-            <div class="shedule-head">Понедельник</div>
-            <div class="shedule-info">Выходной</div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Вторник
+        // параметры по умолчанию
+        $my_posts = get_posts( array(
+            'numberposts' => -1,
+            'category_name'    => 'shedule',
+            'orderby'     => 'date',
+            'order'       => 'ASC',
+            'include'     => array(),
+            'exclude'     => array(),
+            'meta_key'    => '',
+            'meta_value'  =>'',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ) );
+
+        global $post;
+
+        foreach( $my_posts as $post ){
+            setup_postdata( $post );
+        ?>
+<!--            // формат вывода the_title() ...-->
+            <div class="shedule-card">
+                <div class="shedule-head"><?php the_title(); ?></div>
+                <div class="shedule-info"><?php the_field('shedule'); ?></div>
             </div>
-            <div class="shedule-info">
-                16:00-17:20,
-                17-30-18:50,
-                19:00 - 20:20,
-                20:30 - 22:50
-            </div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Среда
-            </div>
-            <div class="shedule-info">
-                Выходной
-            </div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Четверг
-            </div>
-            <div class="shedule-info">
-                16:00-17:20,
-                17:30-18:50,
-                19:00 - 20:20,
-                20:30 - 21:50
-            </div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Пятница
-            </div>
-            <div class="shedule-info">
-                20:30 - 21:50
-            </div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Суббота
-            </div>
-            <div class="shedule-info">
-                15:00 - 16:20,
-                16:30 - 17:50,
-                18:00 - 19:20,
-                19:30 - 21:00
-            </div>
-        </div>
-        <div class="shedule-card">
-            <div class="shedule-head">
-                Воскресенье
-            </div>
-            <div class="shedule-info">
-                15:00 - 16:20,
-                16:30 - 17:50,
-                18:00 - 19:20,
-                19:30 - 21:00
-            </div>
-        </div>
+        <?php
+        }
+
+        wp_reset_postdata(); // сброс
+
+        ?>
+
     </div>
     <h4>Весь инвентарь предоставляется</h4>
 
@@ -233,77 +201,106 @@
 
 <section class="section__info cost" id="cost">
     <div class="catalog">
+       <?php
+        // параметры по умолчанию
+            $my_posts = get_posts( array(
+            'numberposts' => -1,
+            'category_name'    => 'coast',
+            'orderby'     => 'date',
+            'order'       => 'ASC',
+            'include'     => array(),
+            'exclude'     => array(),
+            'meta_key'    => '',
+            'meta_value'  =>'',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
+
+            global $post;
+
+            foreach( $my_posts as $post ){
+            setup_postdata( $post );
+       ?>
         <div class="card">
 
-            <h4>Разовые занятия</h4>
+
+            <h4><?php the_title() ?></h4>
+            <p><?php the_field('start_explan'); ?></p>
             <div>
-                <span class="span-cost">500</span><br>
-                <span class="">рублей/занятие</span>
+                <span class="span-cost"><?php the_field('coast')?> </span><br>
+                <span class=""><?php the_field('unit'); ?></span><br>
+                <span class="span-cost"><?php the_field('stcondary_coast'); ?></span><br>
+                <span class=""><?php the_field('end_explan'); ?></span><br>
             </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
+            <a href="tel:<?php the_field('phone_numb', 2); ?>" class="button card-button">Записаться</a>
         </div>
+       <?php }
 
-        <div class="card">
+        wp_reset_postdata(); // сброс
+        ?>
 
-            <h4>Индивидуальные занятия</h4>
-            <p>Персональные</p>
-            <div>
-                <span class="span-cost">1200</span><br>
-                <span class="">рублей/занятие</span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
 
-        <div class="card">
-
-            <h4>Индивидуальные занятия</h4>
-            <p>Для семьи из трех человек</p>
-            <div>
-                <span class="span-cost">2700</span><br>
-                <span class="">рублей/занятие</span><br>
-                <span>Каждый дом. стрелок +600р.</span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-
-        <div class="card">
-            <h4>Абонемент 8 занятий</h4>
-            <div>
-                <span class="span-cost">4200</span><br>
-                <span class="">рублей</span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-
-        <div class="card">
-            <h4>Абонемент 12 занятий</h4>
-            <div>
-                <span class="span-cost">6000</span><br>
-                <span class="">рублей/занятие</span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-
-        <div class="card">
-            <h4>Праздничные мероприятия</h4>
-            <div>
-                В нашем зале <br>
-                <span class="span-cost">600</span>
-                <span class="">р./чел - 1,5 часа <br> или <br> </span>
-                <span class="span-cost">8000</span>
-                <span>р. - 2,5 часа аренды </span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
-
-        <div class="card">
-            <h4>Выездной тир</h4>
-            <div>
-                <span class="span-cost">4000</span><br>
-                <span class="">рублей/час</span>
-            </div>
-            <a href="tel:<?php the_field('phone_numb'); ?>" class="button card-button">Записаться</a>
-        </div>
+<!--        <div class="card">-->
+<!---->
+<!--            <h4>Индивидуальные занятия</h4>-->
+<!--            <p>Персональные</p>-->
+<!--            <div>-->
+<!--                <span class="span-cost">1200</span><br>-->
+<!--                <span class="">рублей/занятие</span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="card">-->
+<!---->
+<!--            <h4>Индивидуальные занятия</h4>-->
+<!--            <p>Для семьи из трех человек</p>-->
+<!--            <div>-->
+<!--                <span class="span-cost">2700</span><br>-->
+<!--                <span class="">рублей/занятие</span><br>-->
+<!--                <span>Каждый дом. стрелок +600р.</span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="card">-->
+<!--            <h4>Абонемент 8 занятий</h4>-->
+<!--            <div>-->
+<!--                <span class="span-cost">4200</span><br>-->
+<!--                <span class="">рублей</span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="card">-->
+<!--            <h4>Абонемент 12 занятий</h4>-->
+<!--            <div>-->
+<!--                <span class="span-cost">6000</span><br>-->
+<!--                <span class="">рублей/занятие</span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="card">-->
+<!--            <h4>Праздничные мероприятия</h4>-->
+<!--            <div>-->
+<!--                В нашем зале <br>-->
+<!--                <span class="span-cost">600</span>-->
+<!--                <span class="">р./чел - 1,5 часа <br> или <br> </span>-->
+<!--                <span class="span-cost">8000</span>-->
+<!--                <span>р. - 2,5 часа аренды </span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="card">-->
+<!--            <h4>Выездной тир</h4>-->
+<!--            <div>-->
+<!--                <span class="span-cost">4000</span><br>-->
+<!--                <span class="">рублей/час</span>-->
+<!--            </div>-->
+<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
+<!--        </div>-->
 
     </div>
 </section>
