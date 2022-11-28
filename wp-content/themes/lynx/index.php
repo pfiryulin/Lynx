@@ -240,68 +240,6 @@
         ?>
 
 
-<!--        <div class="card">-->
-<!---->
-<!--            <h4>Индивидуальные занятия</h4>-->
-<!--            <p>Персональные</p>-->
-<!--            <div>-->
-<!--                <span class="span-cost">1200</span><br>-->
-<!--                <span class="">рублей/занятие</span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="card">-->
-<!---->
-<!--            <h4>Индивидуальные занятия</h4>-->
-<!--            <p>Для семьи из трех человек</p>-->
-<!--            <div>-->
-<!--                <span class="span-cost">2700</span><br>-->
-<!--                <span class="">рублей/занятие</span><br>-->
-<!--                <span>Каждый дом. стрелок +600р.</span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="card">-->
-<!--            <h4>Абонемент 8 занятий</h4>-->
-<!--            <div>-->
-<!--                <span class="span-cost">4200</span><br>-->
-<!--                <span class="">рублей</span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="card">-->
-<!--            <h4>Абонемент 12 занятий</h4>-->
-<!--            <div>-->
-<!--                <span class="span-cost">6000</span><br>-->
-<!--                <span class="">рублей/занятие</span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="card">-->
-<!--            <h4>Праздничные мероприятия</h4>-->
-<!--            <div>-->
-<!--                В нашем зале <br>-->
-<!--                <span class="span-cost">600</span>-->
-<!--                <span class="">р./чел - 1,5 часа <br> или <br> </span>-->
-<!--                <span class="span-cost">8000</span>-->
-<!--                <span>р. - 2,5 часа аренды </span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="card">-->
-<!--            <h4>Выездной тир</h4>-->
-<!--            <div>-->
-<!--                <span class="span-cost">4000</span><br>-->
-<!--                <span class="">рублей/час</span>-->
-<!--            </div>-->
-<!--            <a href="tel:--><?php //the_field('phone_numb'); ?><!--" class="button card-button">Записаться</a>-->
-<!--        </div>-->
-
     </div>
 </section>
 
