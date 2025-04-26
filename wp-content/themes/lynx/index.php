@@ -5,7 +5,7 @@
 
 ?>
 
-HELLO WORLD!!!!!
+
 <section class="section__lable">
     <div class="article">
         Стрельба из лука - больше чем спорт! Это древнее искусство, которое учит
